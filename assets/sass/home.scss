@@ -5,7 +5,7 @@
   min-height: 100vh;
 }
 
-#home_img {
+#home-img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -46,15 +46,12 @@
 #discover-button {
   display: flex;
   align-items: center;
-  padding: 10px 20px 10px 20px;
   background-color: black;
   border: 1px solid $red;
-  font-size: 15px;
   transition: outline 0.3s;
 }
 
 #discover-button .double-down {
-  height: 25px;
   margin-left: 20px;
 }
 
@@ -63,7 +60,6 @@
 }
 
 #home-text {
-  font-size: 15px;
   --animate-delay: 0.5s;
 }
 
@@ -72,8 +68,20 @@
     display: none;
   }
 
+  #home-text, #discover-button {
+    font-size: 15px;
+  }
+
   #discover-container {
     justify-content: center;
+  }
+
+  #discover-button {
+    padding: 10px 20px 10px 20px;
+  }
+
+  #discover-button .double-down {
+    height: 25px;
   }
 
   #discover {
@@ -87,6 +95,18 @@
   #discover-container {
     justify-content: flex-end;
     align-items: center;
+  }
+
+  #home-text, #discover-button {
+    font-size: 25px;
+  }
+
+  #discover-button {
+    padding: 15px 25px 15px 25px;
+  }
+
+  #discover-button .double-down {
+    height: 35px;
   }
 
   #discover {

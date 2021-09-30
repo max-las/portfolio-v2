@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ $pageName := trim .RelPermalink "/" }}
+  {{ $pageFile := printf "%v.html" $pageName }}
+  {{ partial $pageFile . }}
+{{ end }}
