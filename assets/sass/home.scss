@@ -1,0 +1,97 @@
+@import 'variables';
+
+#main {
+  position: relative;
+  min-height: 100vh;
+}
+
+#home_img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+	height: 70vh;
+}
+
+#left-title-container {
+  position: absolute;
+  width: 100vh;
+  text-align: center;
+  left: 0px;
+  top: 100vh;
+  transform-origin: top left;
+  transform: rotate(-90deg) !important;
+}
+
+#left-title {
+  font-size: 5vw;
+  display: inline-block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $red;
+}
+
+#discover-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#discover-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background-color: black;
+  border: 1px solid $red;
+  font-size: 15px;
+  transition: outline 0.3s;
+}
+
+#discover-button .double-down {
+  height: 25px;
+  margin-left: 20px;
+}
+
+#discover-button:hover {
+  outline: 2px solid $red;
+}
+
+#home-text {
+  font-size: 15px;
+  --animate-delay: 0.5s;
+}
+
+@media screen and (max-width: $mobile-bp) {
+  #left-title {
+    display: none;
+  }
+
+  #discover-container {
+    justify-content: center;
+  }
+
+  #discover {
+    margin-top: 70px;
+    align-items: center;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: $mobile-bp + 1) {
+  #discover-container {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #discover {
+    margin-right: 10vw;
+    height: 200px;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,145 @@
+@import 'variables';
+
+.animate__animated {
+  --animate-duration: 3s;
+}
+
+.is-yellow {
+	color: $yellow;
+}
+
+.is-red {
+	color: $red;
+}
+
+.is-white {
+	color: white;
+}
+
+body {
+	background-color: black;
+	margin: 0px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  padding: 10px 20px 10px 20px;
+  background-color: black;
+}
+
+#mobile-nav-border-bottom {
+  border-top: 1px solid $red;
+  width: 100%;
+}
+
+nav .left-title {
+  font-size: 22px;
+  padding: 0px 20px 10px 10px;
+  border-bottom: 1px solid $red;
+  border-right: 1px solid $red;
+}
+
+.right-nav {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-nav a {
+  color: $yellow;
+  border-bottom: 1px solid rgba(209, 30, 59, 0);
+  transition: border-bottom 0.3s;
+}
+
+.right-nav a:hover {
+  border-bottom: 1px solid rgba(209, 30, 59, 1);
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+
+.burger-menu svg {
+  height: 30px;
+}
+
+.burger-menu .cross-svg {
+  display: none;
+}
+
+.flag {
+  padding: 5px;
+  cursor: pointer;
+  transition: outline 0.3s;
+}
+
+.flag:hover {
+  outline: 1px solid $red;
+}
+
+.flag:not(.selected) {
+  display: none;
+}
+
+.pre {
+  white-space: pre-line;
+}
+
+@media screen and (max-width: $mobile-bp) {
+  .right-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px;
+    justify-content: space-around;
+    display: none;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: $mobile-bp + 1) {
+  body {
+    overflow-y: hidden;
+  }
+
+  #mobile-nav-border-bottom {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  nav .left-title {
+    display: none;
+  }
+
+  .right-nav {
+      width: 500px;
+  }
+}
