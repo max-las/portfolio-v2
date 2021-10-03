@@ -1,27 +1,26 @@
 {{ define "main" }}
   {{ $home_img := resources.Get "images/home_img.jpg" }}
-  {{ $double_down := resources.Get "images/angle-double-down-light.svg" }}
 
-  <div id="main">
+  <div class="main home">
 
-    <img class="animate__animated animate__fadeIn" id="home-img" src="{{ $home_img.Permalink }}">
+    <img class="img-a" src="{{ $home_img.Permalink }}">
 
-    <div class="is-family-playfair-display" id="left-title-container">
-      <div id="left-title" class="animate__animated animate__slideInLeft">
+    <div class="is-family-playfair-display left-title-container">
+      <div class="left-title">
         <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
       </div>
     </div>
 
-    <div id="discover-container">
+    <div class="discover-container">
 
-      <div id="discover">
+      <div class="discover">
 
-        <p id="home-text" class="is-white pre is-family-playfair-display animate__animated animate__slideInRight">Étudiant photographe et
+        <p class="short-text is-white pre is-family-playfair-display">Étudiant photographe et
           développeur web full stack.</p>
 
-        <a id="discover-button" class="is-yellow is-family-playfair-display animate__animated animate__slideInRight" href="/photography/">
+        <a class="discover-button is-yellow is-family-playfair-display" href="/photography/">
           <span>Découvrir</span>
-          <svg class="double-down" class="is-yellow" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-double-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-double-down fa-w-8"><path fill="currentColor" d="M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z" class=""></path></svg>
+          <svg class="double-down is-yellow" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-double-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-double-down fa-w-8"><path fill="currentColor" d="M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z" class=""></path></svg>
         </a>
 
       </div>

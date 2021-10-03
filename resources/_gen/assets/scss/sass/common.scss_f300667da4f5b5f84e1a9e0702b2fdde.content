@@ -10,6 +10,9 @@
 .is-white {
   color: white; }
 
+.is-hidden {
+  display: none; }
+
 body {
   background-color: black;
   margin: 0px;
@@ -35,8 +38,7 @@ nav {
   border-top: 1px solid #D11E3B;
   width: 100%; }
 
-nav .left-title {
-  font-size: 22px;
+.nav-left-title {
   padding: 0px 20px 10px 10px;
   border-bottom: 1px solid #D11E3B;
   border-right: 1px solid #D11E3B; }
@@ -92,6 +94,8 @@ nav .left-title {
     height: 200px;
     justify-content: space-around;
     display: none; }
+  .nav-left-title {
+    font-size: 22px; }
   nav {
     flex-direction: column;
     align-items: flex-start; } }
@@ -103,7 +107,9 @@ nav .left-title {
     display: none; }
   .burger-menu {
     display: none; }
-  nav .left-title {
+  .nav-left-title {
+    font-size: 40px; }
+  .nav-left-title.home {
     display: none; }
   .right-nav {
     width: 500px; } }

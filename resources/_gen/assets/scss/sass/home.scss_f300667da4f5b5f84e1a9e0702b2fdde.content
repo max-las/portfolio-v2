@@ -1,15 +1,15 @@
-#main {
+.home.main {
   position: relative;
   min-height: 100vh; }
 
-#home-img {
+.home .img-a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0px;
   height: 70vh; }
 
-#left-title-container {
+.home .left-title-container {
   position: absolute;
   width: 100vh;
   text-align: center;
@@ -18,66 +18,64 @@
   transform-origin: top left;
   transform: rotate(-90deg) !important; }
 
-#left-title {
+.home .left-title {
   font-size: 5vw;
   display: inline-block;
   padding-top: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #D11E3B; }
 
-#discover-container {
+.home .short-text {
+  --animate-delay: 0.5s; }
+
+.home .discover-container {
   width: 100vw;
   height: 100vh;
   display: flex; }
 
-#discover {
+.home .discover {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
 
-#discover-button {
+.home .discover-button {
   display: flex;
   align-items: center;
   background-color: black;
-  border: 1px solid #D11E3B;
+  outline: 1px solid #D11E3B;
   transition: outline 0.3s; }
-
-#discover-button .double-down {
-  margin-left: 20px; }
-
-#discover-button:hover {
-  outline: 2px solid #D11E3B; }
-
-#home-text {
-  --animate-delay: 0.5s; }
+  .home .discover-button:hover {
+    outline-width: 3px; }
+  .home .discover-button .double-down {
+    margin-left: 20px; }
 
 @media screen and (max-width: 768px) {
-  #left-title {
+  .home .left-title {
     display: none; }
-  #home-text, #discover-button {
+  .home .short-text, .home .discover-button {
     font-size: 15px; }
-  #discover-container {
+  .home .discover-container {
     justify-content: center; }
-  #discover-button {
+  .home .discover-button {
     padding: 10px 20px 10px 20px; }
-  #discover-button .double-down {
-    height: 25px; }
-  #discover {
+    .home .discover-button .double-down {
+      height: 25px; }
+  .home .discover {
     margin-top: 70px;
     align-items: center;
     height: 150px; } }
 
 @media screen and (min-width: 769px) {
-  #discover-container {
+  .home .discover-container {
     justify-content: flex-end;
     align-items: center; }
-  #home-text, #discover-button {
+  .home .short-text, .home .discover-button {
     font-size: 25px; }
-  #discover-button {
+  .home .discover-button {
     padding: 15px 25px 15px 25px; }
-  #discover-button .double-down {
-    height: 35px; }
-  #discover {
+    .home .discover-button .double-down {
+      height: 35px; }
+  .home .discover {
     margin-right: 10vw;
     height: 200px;
     align-items: flex-end; } }

@@ -1,117 +1,117 @@
-@import 'variables';
-
-#main {
+.home.main {
   position: relative;
   min-height: 100vh;
 }
 
-#home-img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0px;
-	height: 70vh;
-}
+.home {
+  .img-a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+  	height: 70vh;
+  }
 
-#left-title-container {
-  position: absolute;
-  width: 100vh;
-  text-align: center;
-  left: 0px;
-  top: 100vh;
-  transform-origin: top left;
-  transform: rotate(-90deg) !important;
-}
+  .left-title-container {
+    position: absolute;
+    width: 100vh;
+    text-align: center;
+    left: 0px;
+    top: 100vh;
+    transform-origin: top left;
+    transform: rotate(-90deg) !important;
+  }
 
-#left-title {
-  font-size: 5vw;
-  display: inline-block;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid $red;
-}
+  .left-title {
+    font-size: 5vw;
+    display: inline-block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $red;
+  }
 
-#discover-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-}
+  .short-text {
+    --animate-delay: 0.5s;
+  }
 
-#discover {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .discover-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
 
-#discover-button {
-  display: flex;
-  align-items: center;
-  background-color: black;
-  border: 1px solid $red;
-  transition: outline 0.3s;
-}
+  .discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-#discover-button .double-down {
-  margin-left: 20px;
-}
-
-#discover-button:hover {
-  outline: 2px solid $red;
-}
-
-#home-text {
-  --animate-delay: 0.5s;
+  .discover-button {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    outline: 1px solid $red;
+    transition: outline 0.3s;
+    &:hover {
+      outline-width: 3px;
+    }
+    .double-down {
+      margin-left: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-bp) {
-  #left-title {
-    display: none;
-  }
+  .home {
+    .left-title {
+      display: none;
+    }
 
-  #home-text, #discover-button {
-    font-size: 15px;
-  }
+    .short-text, .discover-button {
+      font-size: 15px;
+    }
 
-  #discover-container {
-    justify-content: center;
-  }
+    .discover-container {
+      justify-content: center;
+    }
 
-  #discover-button {
-    padding: 10px 20px 10px 20px;
-  }
+    .discover-button {
+      padding: 10px 20px 10px 20px;
+      .double-down {
+        height: 25px;
+      }
+    }
 
-  #discover-button .double-down {
-    height: 25px;
-  }
-
-  #discover {
-    margin-top: 70px;
-    align-items: center;
-    height: 150px;
+    .discover {
+      margin-top: 70px;
+      align-items: center;
+      height: 150px;
+    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
-  #discover-container {
-    justify-content: flex-end;
-    align-items: center;
-  }
+  .home {
+    .discover-container {
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-  #home-text, #discover-button {
-    font-size: 25px;
-  }
+    .short-text, .discover-button {
+      font-size: 25px;
+    }
 
-  #discover-button {
-    padding: 15px 25px 15px 25px;
-  }
+    .discover-button {
+      padding: 15px 25px 15px 25px;
+      .double-down {
+        height: 35px;
+      }
+    }
 
-  #discover-button .double-down {
-    height: 35px;
-  }
-
-  #discover {
-    margin-right: 10vw;
-    height: 200px;
-    align-items: flex-end;
+    .discover {
+      margin-right: 10vw;
+      height: 200px;
+      align-items: flex-end;
+    }
   }
 }

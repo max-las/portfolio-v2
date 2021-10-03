@@ -1,0 +1,7 @@
+<div class="grid-container">
+  <div class="photo-grid">
+    {{ range resources.Match "photos/**" }}
+      <img src="{{ .Permalink }}" style="width: 100%;">
+    {{ end }}
+  </div>
+</div>

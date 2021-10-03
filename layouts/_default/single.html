@@ -1,5 +1,5 @@
 {{ define "main" }}
   {{ $pageName := trim .RelPermalink "/" }}
-  {{ $pageFile := printf "%v.html" $pageName }}
+  {{ $pageFile := printf "%v/index.html" $pageName }}
   {{ partial $pageFile . }}
 {{ end }}

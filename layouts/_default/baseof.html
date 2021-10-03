@@ -8,47 +8,55 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-  	{{ $common_sass := resources.Get "sass/common.scss" }}
-    {{ $home_sass := resources.Get "sass/home.scss" }}
-    {{ $common_css := $common_sass | resources.ToCSS }}
-    {{ $home_css := $home_sass | resources.ToCSS }}
     {{ $fonts_css := resources.Get "css/fonts.css" }}
+    {{ $styles := resources.Match "sass/**.scss" | resources.Concat "sass/styles.scss" | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $fonts_css.Permalink }}">
-    <link rel="stylesheet" href="{{ $common_css.Permalink }}">
-    <link rel="stylesheet" href="{{ $home_css.Permalink }}">
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.0/cash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
 
   	{{ $script := resources.Get "js/script.js" }}
   	<script src="{{ $script.Permalink }}"></script>
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="page">
     {{ $fr := resources.Get "images/fr.png" }}
     {{ $en := resources.Get "images/en.png" }}
-    <nav class="is-family-playfair-display animate__animated animate__slideInDown">
-      <div class="left-nav">
-        <a href="/">
-          <div class="left-title">
-            <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
+      <nav class="is-family-playfair-display">
+        <div class="left-nav">
+          <a href="/">
+            {{ if .IsHome }}
+              <div class="nav-left-title home">
+            {{ else }}
+              <div class="nav-left-title">
+            {{ end }}
+                <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
+              </div>
+          </a>
+
+          <div class="burger-menu is-yellow" onclick="toggleMobileNav()">
+            <svg class="burger-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14"><path fill="currentColor" d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z" class=""></path></svg>
+            <svg class="cross-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
           </div>
-        </a>
-
-        <div class="burger-menu is-yellow" onclick="toggleMobileNav()">
-          <svg class="burger-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14"><path fill="currentColor" d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z" class=""></path></svg>
-          <svg class="cross-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
         </div>
-      </div>
 
-      <div class="right-nav">
-        <a href="/photography/">Photographie</a>
-        <a href="/web-developpment/">Développpement web</a>
-        <a href="/about/">À propos</a>
-        <img id="fr-flag" class="flag selected" src="{{ $fr.Permalink }}" height="20px">
-        <img id="en-flag" class="flag" src="{{ $en.Permalink }}" height="20px">
-        <div id="mobile-nav-border-bottom"></div>
+        <div class="right-nav">
+          <a href="/photography/">Photographie</a>
+          <a href="/web-developpment/">Développpement web</a>
+          <a href="/about/">À propos</a>
+          <img id="fr-flag" class="flag selected" src="{{ $fr.Permalink }}" height="20px">
+          <img id="en-flag" class="flag" src="{{ $en.Permalink }}" height="20px">
+          <div id="mobile-nav-border-bottom"></div>
+        </div>
+      </nav>
+
+
+      <div class="barba-content">
+        {{ block "main" . }}
+        {{ end }}
       </div>
-    </nav>
-    {{ block "main" . }}
-    {{ end }}
+    </main>
   </body>
 </html>
