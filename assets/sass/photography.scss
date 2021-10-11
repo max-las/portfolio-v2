@@ -1,38 +1,12 @@
 .photography {
-  .left-side-container {
-    font-size: 4vw;
-    width: 4em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .top-spacer {
-      margin-bottom: auto;
-    }
-  }
-
-  .next-page-button {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-    outline: 1px solid $red;
-    transition: outline 0.3s;
-    &:hover {
-      outline-width: 3px;
-    }
-    .double-down {
-      height: 25px;
-      margin-left: 20px;
-    }
-  }
-
   .grid-container {
     flex: 1;
+    position: relative;
+    z-index: 100;
     overflow-y: scroll;
     height: calc(100% - 20px);
     margin-top: 20px;
+
     scrollbar-width: thin;
     scrollbar-color: $yellow black;
     &::-webkit-scrollbar {
@@ -50,44 +24,32 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    margin-right: 20px;
+    margin: 5px 20px 0px 5px;
+
+    img {
+
+      &:hover {
+        outline: 2px solid $red;
+      }
+    }
   }
 }
 
 @media screen and (max-width: $mobile-bp) {
   .photography {
     .left-side-container {
-      width: 100%;
-      height: 100vh;
-      .top-spacer {
-        display: none;
-      }
-    }
-
-    .left-title {
-      padding-bottom: 0.7em;
-      border-bottom: 1px solid $red;
-      margin-top: 100px;
-    }
-
-    .grid-container {
-      display: none;
-    }
-
-    .left-side-container {
-      justify-content: space-between;
       .grid-container {
         display: block;
         margin: 20px;
       }
     }
 
-    .photo-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .grid-container {
+      display: none;
     }
 
-    .next-page-button {
-      margin-bottom: 20px;
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -98,17 +60,6 @@
       .grid-container {
         display: none;
       }
-    }
-
-    .left-title {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg) !important;
-      padding-left: 0.7em;
-      border-left: 1px solid $red;
-    }
-
-    .next-page-button {
-      margin-top: auto;
     }
   }
 }

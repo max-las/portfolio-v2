@@ -1,11 +1,7 @@
 {{ define "main" }}
-  {{ $home_img := resources.Get "images/home_img.jpg" }}
+  <div class="main-content home">
 
-  <div class="main home">
-
-    <img class="img-a" src="{{ $home_img.Permalink }}">
-
-    <div class="is-family-playfair-display left-title-container">
+    <div class="is-family-playfair-display left-side-container">
       <div class="left-title">
         <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
       </div>

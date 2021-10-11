@@ -26,6 +26,10 @@ body {
 	margin: 0px;
 }
 
+header {
+  z-index: 9;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -124,6 +128,35 @@ nav {
   white-space: pre-line;
 }
 
+.left-side-container {
+  font-size: 4vw;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .left-title {
+    margin-top: auto;
+  }
+}
+
+.next-page-button {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  outline: 1px solid $red;
+  transition: outline 0.3s;
+  &:hover {
+    outline-width: 3px;
+  }
+  .double-down {
+    height: 25px;
+    margin-left: 20px;
+  }
+}
+
 @media screen and (max-width: $mobile-bp) {
   .right-nav {
     flex-direction: column;
@@ -141,6 +174,23 @@ nav {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .left-side-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .left-title {
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid $red;
+  }
+
+  .next-page-button {
+    margin-bottom: 20px;
+  }
+
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
@@ -162,5 +212,16 @@ nav {
 
   .right-nav {
       width: 500px;
+  }
+
+  .left-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) !important;
+    padding-left: 0.7em;
+    border-left: 1px solid $red;
+  }
+
+  .next-page-button {
+    margin-top: auto;
   }
 }

@@ -45,10 +45,9 @@
             <a href="/photography/">Photographie</a>
             <a href="/web-developpment/">Développpement web</a>
             <a href="/about/">À propos</a>
-            {{ $fr := resources.Get "images/fr.png" }}
-            {{ $en := resources.Get "images/en.png" }}
-            <img id="fr-flag" class="flag selected" src="{{ $fr.Permalink }}" height="20px">
-            <img id="en-flag" class="flag" src="{{ $en.Permalink }}" height="20px">
+
+            <img id="fr-flag" class="flag selected" src="/images/fr.png" height="20px">
+            <img id="en-flag" class="flag" src="/images/en.png" height="20px">
             <div id="mobile-nav-border-bottom"></div>
           </div>
         </nav>
