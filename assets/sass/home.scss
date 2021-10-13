@@ -8,6 +8,7 @@
   }
 
   .left-side-container {
+    font-size: 5vw;
     .left-title {
       margin-top: 0px;
     }
@@ -19,6 +20,7 @@
 
   .discover-container {
     display: flex;
+    height: 100%;
   }
 
   .discover {
@@ -44,12 +46,21 @@
 
 @media screen and (max-width: $mobile-bp) {
   .home {
+    &.main-content {
+      background-size: 60%;
+    }
+
+    .left-side-container {
+      display: none;
+    }
+
     .short-text, .discover-button {
       font-size: 15px;
     }
 
     .discover-container {
       justify-content: center;
+      width: 100vw;
     }
 
     .discover-button {

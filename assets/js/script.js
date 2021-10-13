@@ -12,20 +12,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	barba.init({
     transitions: [{
-      name: 'page-page',
-      to: {
-        custom: function(data){
-          return true;
-        }
-      },
+      name: 'default-transition',
       leave(data) {
         return gsap.to(data.current.container.querySelector(".barba-content"), {
-          transform: "translateY(-100%)"
+          yPercent:-100
         });
       },
       enter(data) {
         gsap.from(data.next.container.querySelector(".barba-content"), {
-          transform: "translateY(100%)"
+          yPercent:100
         });
       }
     }]
