@@ -35,15 +35,15 @@
 
 @media screen and (max-width: $mobile-bp) {
   .photography {
+    .grid-container {
+      display: none;
+    }
+
     .left-side-container {
       .grid-container {
         display: block;
         margin: 20px;
       }
-    }
-
-    .grid-container {
-      display: none;
     }
 
     .photo-grid {

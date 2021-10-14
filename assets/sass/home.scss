@@ -8,6 +8,7 @@
   }
 
   .left-side-container {
+    z-index: 10;
     font-size: 5vw;
     .left-title {
       margin-top: 0px;
@@ -54,8 +55,12 @@
       display: none;
     }
 
-    .short-text, .discover-button {
+    .discover-button {
       font-size: 15px;
+    }
+
+    .short-text {
+      font-size: 20px;
     }
 
     .discover-container {
@@ -85,7 +90,11 @@
       align-items: center;
     }
 
-    .short-text, .discover-button {
+    .discover-button {
+      font-size: 25px;
+    }
+
+    .short-text {
       font-size: 25px;
     }
 

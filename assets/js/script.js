@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	animateCSS("nav", "slideInDown");
 
-	if(document.querySelector(".main.home")){
-		animateCSS(".img-a", "fadeIn");
-		animateCSS(".left-title", "slideInLeft");
+	if(document.querySelector(".main-content.home")){
 		animateCSS(".short-text", "slideInRight");
 		animateCSS(".discover-button", "slideInRight");
 	}
+
+	animateCSS(".left-side-container", "slideInLeft");
 
 	barba.init({
     transitions: [{
