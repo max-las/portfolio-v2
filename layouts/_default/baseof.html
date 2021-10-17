@@ -23,9 +23,10 @@
     <main data-barba="container" data-barba-namespace="page">
       <header>
         {{ if .IsHome }}
-          
+          <nav class="main-nav on-home is-family-playfair-display">
         {{ else }}
           <nav class="main-nav is-family-playfair-display">
+        {{ end }}
             <div class="left-nav">
               <a href="/">
                 <div class="left-title">
@@ -49,7 +50,6 @@
               <div class="mobile-nav-border-bottom"></div>
             </div>
           </nav>
-        {{ end }}
       </header>
 
       <section class="barba-content">

@@ -50,12 +50,15 @@ function toggleMobileNav(){
 	let burgerSvg = document.querySelector(".burger-menu .burger-svg");
 
 	if(rightNav.style.display == "flex"){
-		rightNav.style.display = null;
-		crossSvg.style.display = null;
-		burgerSvg.style.display = null;
+		animateCSS(".right-nav", "slideOutUp").then(() => {
+			rightNav.style.display = null;
+			crossSvg.style.display = null;
+			burgerSvg.style.display = null;
+		});
 	}else{
 		rightNav.style.display = "flex";
 		crossSvg.style.display = "inline";
 		burgerSvg.style.display = "none";
+		animateCSS(".right-nav", "slideInDown");
 	}
 }

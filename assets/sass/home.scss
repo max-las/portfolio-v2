@@ -13,12 +13,15 @@
   .home-row {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100vw;
 
     .left {
-      height: 70vh;
+
+       img {
+         height: 100%;
+       }
     }
 
     .v-separator {
@@ -27,12 +30,6 @@
     }
 
     .right {
-      width: 450px;
-      margin-top: 70px;
-
-      p {
-        font-size: 28px;
-      }
 
       .home-nav {
         display: flex;
@@ -68,12 +65,63 @@
 
 @media screen and (max-width: $mobile-bp) {
   .home {
+    .home-title-wrapper {
+      display: none;
+    }
 
+    .home-row {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      height: calc(100vh - 85px);
+      align-items: center;
+
+      .left {
+        flex: 1;
+        height: 0px;
+      }
+
+      .right {
+        font-size: 18px;
+
+        p {
+          text-align: center;
+          width: 296px;
+        }
+
+        .home-nav {
+          a {
+            text-align: center;
+
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .v-separator {
+        display: none;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
-  .home {
+  .main-nav.on-home {
+    display: none;
+  }
 
+  .home {
+    .home-row {
+      .right {
+        width: 450px;
+        margin-top: 70px;
+        font-size: 28px;
+      }
+
+      .left {
+        height: 70vh;
+      }
+    }
   }
 }

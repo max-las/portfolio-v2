@@ -42,20 +42,16 @@ body {
 	margin: 0px;
 }
 
-header {
-  z-index: 9;
-}
-
 .main-nav {
   position: fixed;
   display: flex;
+  z-index: 9;
   align-items: center;
   justify-content: space-between;
-  z-index: 9;
   width: 100vw;
-  background-color: black;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #000000;
 
   .left-nav {
     display: flex;
@@ -101,7 +97,7 @@ header {
       color: $yellow;
       border-bottom: 1px solid rgba(209, 30, 59, 0);
       transition: border-bottom 0.3s;
-      margin-right: 20px;
+      margin-right: 40px;
 
       &:hover {
         border-bottom: 1px solid rgba(209, 30, 59, 1);
@@ -125,7 +121,28 @@ header {
 }
 
 @media screen and (max-width: $mobile-bp) {
+  .main-nav {
+    flex-direction: column;
 
+    .left-nav {
+      width: 100%;
+
+      .left-title {
+        font-size: 24px;
+      }
+    }
+
+    .right-nav {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+      display: none;
+
+      * {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
