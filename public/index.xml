@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maxime Lasserre on Portfolio - Maxime Lasserre</title>
+    <link>/</link>
+    <description>Recent content in Maxime Lasserre on Portfolio - Maxime Lasserre</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 27 Sep 2021 10:15:00 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Développement web | Maxime Lasserre</title>
+      <link>/web-development/</link>
+      <pubDate>Thu, 30 Sep 2021 11:29:39 +0200</pubDate>
+      
+      <guid>/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Me connaître | Maxime Lasserre</title>
+      <link>/know-me/</link>
+      <pubDate>Thu, 30 Sep 2021 11:29:39 +0200</pubDate>
+      
+      <guid>/know-me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mentions Légales | Maxime Lasserre</title>
+      <link>/legal/</link>
+      <pubDate>Thu, 30 Sep 2021 11:29:39 +0200</pubDate>
+      
+      <guid>/legal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photographie | Maxime Lasserre</title>
+      <link>/photography/</link>
+      <pubDate>Thu, 30 Sep 2021 11:29:39 +0200</pubDate>
+      
+      <guid>/photography/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
