@@ -18,7 +18,6 @@
     width: 100vw;
 
     .left {
-
        img {
          height: 100%;
        }
@@ -30,7 +29,6 @@
     }
 
     .right {
-
       .home-nav {
         display: flex;
         flex-direction: column;
@@ -61,6 +59,18 @@
       }
     }
   }
+
+  .legal {
+    font-size: 14px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    border-left: 1px solid $red;
+    color: $yellow;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+  }
 }
 
 @media screen and (max-width: $mobile-bp) {
@@ -89,8 +99,10 @@
         }
 
         .home-nav {
+          align-items: center;
+
           a {
-            text-align: center;
+            border-bottom: 1px solid $red;
 
             img {
               display: none;

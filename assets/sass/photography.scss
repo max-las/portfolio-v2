@@ -1,27 +1,75 @@
 .photography {
+  .title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 54px;
+  }
+
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 50px;
 
     img {
-      cursor: pointer;
-
       &:hover {
         outline: 2px solid $red;
       }
+    }
+  }
+
+  .legal-wrapper {
+    .legal {
+      font-size: 14px;
+      color: $yellow;
+      text-decoration: none;
     }
   }
 }
 
 @media screen and (max-width: $mobile-bp) {
   .photography {
+    .title {
+      font-size: 32px;
+    }
 
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .legal-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      border-top: 1px solid $red;
+      width: 90vw;
+      margin-right: auto;
+      margin-left: auto;
+
+      .legal {
+        border-bottom: 1px solid $red;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
   .photography {
+    .legal-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
 
+      .legal {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        border-left: 1px solid $red;
+      }
+    }
   }
 }
