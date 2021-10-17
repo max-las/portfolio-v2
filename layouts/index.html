@@ -1,23 +1,27 @@
 {{ define "main" }}
   <div class="main-content home">
 
-    <div class="is-family-playfair-display left-side-container">
-      <div class="left-title">
+    <div class="home-title-wrapper">
+      <h1 class="is-family-playfair-display home-title animate-duration_3s">
         <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
-      </div>
+      </h1>
     </div>
 
-    <div class="discover-container">
+    <div class="home-row">
 
-      <div class="discover">
+      <img class="left animate-duration_3s" src="/images/home_img.jpg" alt="Photo de Maxime Lasserre">
 
-        <p class="short-text is-white pre is-family-playfair-display">Apprenti développeur web
-          full stack et photographe.</p>
+      <div class="v-separator"></div>
 
-        <a class="discover-button is-yellow is-family-playfair-display" href="/web-development/">
-          <span>Découvrir</span>
-          <svg class="double-down is-yellow" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-double-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-angle-double-down fa-w-8"><path fill="currentColor" d="M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z" class=""></path></svg>
-        </a>
+      <div class="right animate-duration_3s">
+
+        <p class="is-white is-family-playfair-display">Apprenti développeur web full stack et photographe.</p>
+
+        <nav class="home-nav is-yellow is-family-playfair-display">
+          <a href="/web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">Développement Web</span></a>
+          <a href="/photography/"><img src="/images/chevron-double-right.svg"><span class="underline">Photographie</span></a>
+          <a href="/know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">Me connaître</span></a>
+        </nav>
 
       </div>
 

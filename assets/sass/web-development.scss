@@ -1,27 +1,11 @@
 .web-development {
   .web-container {
-    flex: 1;
-    height: calc(100% - 104px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-
-    scrollbar-width: thin;
-    scrollbar-color: $yellow black;
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-    &::-webkit-scrollbar-track {
-      background: black;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: $yellow;
-    }
 
     .site-presentation {
       display: flex;
-      width: calc(min(40vw, 600px) + 310px);
 
       img {
         width: calc(min(40vw, 600px));
@@ -60,46 +44,12 @@
 
 @media screen and (max-width: $mobile-bp) {
   .web-development {
-    .web-container {
-      display: none;
 
-      width: 100vw;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-      .site-presentation {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-
-        img {
-          width: 90%;
-        }
-
-        p {
-          text-align: center;
-        }
-
-        .v-separator {
-          display: none;
-        }
-      }
-    }
-
-    .left-side-container {
-      .web-container {
-        display: block;
-      }
-    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
   .web-development {
-    .left-side-container {
-      .web-container {
-        display: none;
-      }
-    }
+
   }
 }

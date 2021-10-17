@@ -1,114 +1,79 @@
 .home {
-  &.main-content {
-    justify-content: space-between;
-    background-image: url('/images/home_img.jpg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 30%;
-  }
-
-  .left-side-container {
-    z-index: 10;
-    font-size: 5vw;
-    .left-title {
-      margin-top: 0px;
-    }
-  }
-
-  .short-text {
-    --animate-delay: 0.5s;
-  }
-
-  .discover-container {
+  .home-title-wrapper {
     display: flex;
-    height: 100%;
-  }
-
-  .discover {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .discover-button {
-    display: flex;
+    height: 30vh;
+    justify-content: center;
     align-items: center;
-    background-color: black;
-    outline: 1px solid $red;
-    transition: outline 0.3s;
-    &:hover {
-      outline-width: 3px;
+
+    .home-title {
+      font-size: 72px;
     }
-    .double-down {
-      margin-left: 20px;
+  }
+
+  .home-row {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+
+    .left {
+      height: 70vh;
+    }
+
+    .v-separator {
+      border-left: 1px solid $red;
+      margin : 40px 85px 40px 85px;
+    }
+
+    .right {
+      width: 450px;
+      margin-top: 70px;
+
+      p {
+        font-size: 28px;
+      }
+
+      .home-nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: $yellow;
+          text-decoration: none;
+          margin-top: 20px;
+
+          img {
+            position: relative;
+            top: 4px;
+            height: 20px;
+            margin-right: 10px;
+          }
+
+          .underline {
+            border-bottom: 1px solid rgba(209, 30, 59, 0);
+            transition: border-bottom 0.3s;
+          }
+
+          &:hover {
+            .underline {
+              border-bottom: 1px solid rgba(209, 30, 59, 1);
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: $mobile-bp) {
   .home {
-    &.main-content {
-      background-size: 60%;
-    }
 
-    .left-side-container {
-      display: none;
-    }
-
-    .discover-button {
-      font-size: 15px;
-    }
-
-    .short-text {
-      font-size: 20px;
-    }
-
-    .discover-container {
-      justify-content: center;
-      width: 100vw;
-    }
-
-    .discover-button {
-      padding: 10px 20px 10px 20px;
-      .double-down {
-        height: 25px;
-      }
-    }
-
-    .discover {
-      margin-top: 70px;
-      align-items: center;
-      height: 150px;
-    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
   .home {
-    .discover-container {
-      justify-content: flex-end;
-      align-items: center;
-    }
 
-    .discover-button {
-      font-size: 25px;
-    }
-
-    .short-text {
-      font-size: 25px;
-    }
-
-    .discover-button {
-      padding: 15px 25px 15px 25px;
-      .double-down {
-        height: 35px;
-      }
-    }
-
-    .discover {
-      margin-right: 10vw;
-      height: 200px;
-      align-items: flex-end;
-    }
   }
 }

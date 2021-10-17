@@ -1,26 +1,21 @@
 document.addEventListener("DOMContentLoaded", function(){
 	$(".flag").on("click", toggleFlag);
 
-	animateCSS("nav", "slideInDown");
-
-	if(document.querySelector(".main-content.home")){
-		animateCSS(".short-text", "slideInRight");
-		animateCSS(".discover-button", "slideInRight");
-	}
-
-	animateCSS(".left-side-container", "slideInLeft");
+	animateCSS(".home-title", "slideInDown");
+	animateCSS(".home-row .left", "slideInLeft");
+	animateCSS(".home-row .right", "slideInRight");
 
 	barba.init({
     transitions: [{
       name: 'default-transition',
       leave(data) {
         return gsap.to(data.current.container.querySelector(".barba-content"), {
-          yPercent:-100
+          opacity: 0
         });
       },
       enter(data) {
         gsap.from(data.next.container.querySelector(".barba-content"), {
-          yPercent:100
+          opacity: 0
         });
       }
     }]

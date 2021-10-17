@@ -1,8 +1,6 @@
 .about {
 
   .about-container {
-    flex: 1;
-    height: calc(100% - 104px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +13,6 @@
 
       a {
         color: #FFFFFF;
-        font-family: 'IBM Plex Serif', serif;
         text-decoration: underline;
       }
     }
@@ -108,29 +105,12 @@
 
 @media screen and (max-width: $mobile-bp) {
   .about {
-    .about-container {
-      display: none;
 
-      width: 100vw;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-    }
-
-    .left-side-container {
-      .about-container {
-        display: block;
-      }
-    }
   }
 }
 
 @media screen and (min-width: $mobile-bp + 1) {
   .about {
-    .left-side-container {
-      .about-container {
-        display: none;
-      }
-    }
+
   }
 }
