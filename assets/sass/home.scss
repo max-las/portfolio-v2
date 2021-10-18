@@ -13,8 +13,6 @@
   .home-row {
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 0px;
     width: 100vw;
 
     .left {
@@ -82,12 +80,11 @@
     .home-row {
       flex-direction: column-reverse;
       justify-content: flex-end;
-      height: calc(100vh - 85px);
       align-items: center;
+      margin-top: 100px;
 
       .left {
-        flex: 1;
-        height: 0px;
+        height: 50vh;
       }
 
       .right {
@@ -125,6 +122,9 @@
 
   .home {
     .home-row {
+      position: fixed;
+      bottom: 0px;
+
       .right {
         width: 450px;
         margin-top: 70px;
