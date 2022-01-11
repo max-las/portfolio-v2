@@ -94,7 +94,7 @@ body {
       width: 100%;
     }
 
-    a {
+    a:not(.flagLink) {
       text-decoration: none;
       color: $yellow;
       border-bottom: 1px solid rgba(209, 30, 59, 0);
@@ -108,15 +108,10 @@ body {
 
     .flag {
       padding: 5px;
-      cursor: pointer;
-      transition: outline 0.3s;
 
-      &:hover {
+      &.selected {
+        cursor: pointer;
         outline: 1px solid $red;
-      }
-
-      &:not(.selected) {
-        display: none;
       }
     }
   }

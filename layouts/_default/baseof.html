@@ -46,8 +46,17 @@
               <a href="{{ .Param "root" }}photography/">{{ humanize (i18n "photography") }}</a>
               <a href="{{ .Param "root" }}know-me/">{{ humanize (i18n "know_me") }}</a>
 
-              <!-- <img id="fr-flag" class="flag selected" src="/images/fr.png" height="20px">
-              <img id="en-flag" class="flag" src="/images/en.png" height="20px"> -->
+              {{ range .Site.Languages }}
+                {{ if eq . $.Site.Language }}
+                  <img id="{{ .Lang }}-flag" class="flag selected" src="/images/{{ .Lang }}.png" height="20px">
+                {{ end }}
+              {{ end }}
+              {{ range .Translations }}
+                <a href="{{ .Permalink }}" class="flagLink">
+                  <img id="{{ .Language.Lang }}-flag" class="flag" src="/images/{{ .Language.Lang }}.png" height="20px">
+                </a>
+              {{ end }}
+
               <div class="mobile-nav-border-bottom"></div>
             </div>
           </nav>
