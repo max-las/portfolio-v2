@@ -29,7 +29,7 @@
           <nav class="main-nav is-family-playfair-display">
         {{ end }}
             <div class="left-nav">
-              <a href="/">
+              <a href="{{ .Param "root" }}">
                 <div class="left-title">
                   <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
                 </div>
@@ -42,9 +42,9 @@
             </div>
 
             <div class="right-nav">
-              <a href="/web-development/">Développement web</a>
-              <a href="/photography/">Photographie</a>
-              <a href="/know-me/">Me Connaître</a>
+              <a href="{{ .Param "root" }}web-development/">{{ humanize (i18n "web_development") }}</a>
+              <a href="{{ .Param "root" }}photography/">{{ humanize (i18n "photography") }}</a>
+              <a href="{{ .Param "root" }}know-me/">{{ humanize (i18n "know_me") }}</a>
 
               <!-- <img id="fr-flag" class="flag selected" src="/images/fr.png" height="20px">
               <img id="en-flag" class="flag" src="/images/en.png" height="20px"> -->

@@ -1,0 +1,17 @@
+<div class="main-content photography">
+
+  <h1 class="title is-family-playfair-display">
+    {{ partial (printf "%v/title.html" (.Scratch.Get "TPartialsPath")) . }}
+  </h1>
+
+  <div class="photo-grid">
+    {{ range resources.Match "photos/**.jpg" }}
+      <img src="{{ .Permalink }}" style="width: 100%;">
+    {{ end }}
+  </div>
+
+  <div class="legal-wrapper">
+    <a class="legal is-family-ibm-plex" href="/legal/">{{ humanize (i18n "legal_notice") }}</a>
+  </div>
+
+</div>

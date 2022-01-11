@@ -1,0 +1,19 @@
+baseURL: /
+title: Portfolio - Maxime Lasserre
+disableKinds:
+  - taxonomy
+  - term
+defaultContentLanguage: fr
+languages:
+  fr:
+    languageCode: fr
+    contentDir: content/fr
+    languageName: Français
+    weight: 1
+    root: /
+  en:
+    languageCode: en
+    contentDir: content/en
+    languageName: English
+    weight: 2
+    root: /en/

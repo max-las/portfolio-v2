@@ -10,26 +10,26 @@
     <div class="home-row">
 
       <div class="left animate-duration_3s">
-        <img src="/images/home_img.jpg" alt="Photo de Maxime Lasserre">
+        <img src="/images/home_img.jpg" alt="Photo {{ i18n "of" }} Maxime Lasserre">
       </div>
 
       <div class="v-separator"></div>
 
       <div class="right animate-duration_3s">
 
-        <p class="is-white is-family-playfair-display">Développeur web full stack et photographe.</p>
+        <p class="is-white is-family-playfair-display">{{ i18n "home_presentation" }}</p>
 
         <nav class="home-nav is-yellow is-family-playfair-display">
-          <a href="/web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">Développement Web</span></a>
-          <a href="/photography/"><img src="/images/chevron-double-right.svg"><span class="underline">Photographie</span></a>
-          <a href="/know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">Me connaître</span></a>
+          <a href="{{ .Param "root" }}web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "web_development") }}</span></a>
+          <a href="{{ .Param "root" }}photography/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "photography") }}</span></a>
+          <a href="{{ .Param "root" }}know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "know_me") }}</span></a>
         </nav>
 
       </div>
 
     </div>
 
-    <a class="legal is-family-ibm-plex" href="/legal/">Mentions légales</a>
+    <a class="legal is-family-ibm-plex" href="{{ .Param "root" }}legal/">{{ i18n "legal_notice" }}</a>
 
   </div>
 {{ end }}

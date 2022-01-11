@@ -1,5 +1,6 @@
 {{ define "main" }}
-  {{ $pageName := trim .RelPermalink "/" }}
-  {{ $pageFile := printf "%v/index.html" $pageName }}
-  {{ partial $pageFile . }}
+  {{ $languageNeutralPath := strings.TrimPrefix (printf "%v/" .Site.Language.Lang) (trim .RelPermalink "/") }}
+  {{ $index := printf "common/%v/index.html" $languageNeutralPath }}
+  {{ .Scratch.Set "TPartialsPath" (printf "%v/%v" .Site.Language.Lang $languageNeutralPath) }}
+  {{ partial $index . }}
 {{ end }}

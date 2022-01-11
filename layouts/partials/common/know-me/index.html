@@ -1,0 +1,66 @@
+<div class="main-content know-me">
+
+  <h1 class="title is-family-playfair-display">
+    {{ partial (printf "%v/title.html" (.Scratch.Get "TPartialsPath")) . }}
+  </h1>
+
+  <div class="presentation-text is-family-ibm-plex">
+    {{ partial (printf "%v/presentation.html" (.Scratch.Get "TPartialsPath")) . }}
+  </div>
+
+  <div class="display-row">
+
+    <div class="icons-grid">
+      <div class="icons-column">
+        <img src="/images/photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop">
+        <img src="/images/lightroom.svg" alt="Adobe Lightroom Classic" title="Adobe Lightroom Classic">
+        <img src="/images/premiere_pro.svg" alt="Adobe Premiere Pro" title="Adobe Premiere Pro">
+        <img src="/images/audition.svg" alt="Adobe Audition" title="Adobe Audition">
+        <img src="/images/audacity.png" alt="Audacity" title="Audacity">
+      </div>
+
+      <div class="icons-column">
+        <img src="/images/javascript.svg" alt="Javascript" title="Javascript">
+        <img src="/images/golang.svg" alt="Go" title="Golang">
+        <img src="/images/rails.svg" alt="Ruby on Rails" title="Ruby on Rails">
+        <img src="/images/php.svg" alt="PHP" title="PHP">
+        <img src="/images/postgresql.png" alt="PostgreSQL" title="PostgreSQL">
+      </div>
+
+      <div class="icons-column">
+        <img src="/images/figma.svg" alt="Figma" title="Figma">
+        <img src="/images/vue.svg" alt="Vue.js" title="Vue.js">
+        <img src="/images/react.svg" alt="React.js" title="React.js">
+        <img src="/images/sass.svg" alt="Sass" title="Sass">
+        <div class="icons-row">
+          <img src="/images/html.svg" alt="HTML5" title="HTML5">
+          <img src="/images/css.svg" alt="CSS3" title="CSS3">
+        </div>
+      </div>
+    </div>
+
+    <div class="know-me-img-custom-border"></div>
+    <img class="know-me-img" src="/images/apropos.jpg">
+
+    <div class="social-column">
+      <a href="https://www.instagram.com/_maxime.lasserre/">
+        <img src="/images/instagram-brands.svg" alt="Instagram {{ i18n "of" }} Maxime Lasserre">
+      </a>
+      <a href="https://www.linkedin.com/in/maxime-lasserre-0798801b7/">
+        <img src="/images/linkedin-in-brands.svg" alt="LinkedIn {{ i18n "of" }} Maxime Lasserre">
+      </a>
+      <a href="https://github.com/max-las">
+        <img src="/images/github-brands.svg" alt="Github {{ i18n "of" }} Maxime Lasserre">
+      </a>
+      <a href="mailto:lasserre.maxime@yahoo.fr">
+        <img src="/images/envelope-regular.svg" alt="Email {{ i18n "to" }} Maxime Lasserre">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="legal-wrapper">
+    <a class="legal is-family-ibm-plex" href="/legal/">{{ i18n "legal_notice" }}</a>
+  </div>
+
+</div>
