@@ -6,7 +6,10 @@
 
   <div class="photo-grid">
     {{ range resources.Match "photos/**.jpg" }}
-      <img src="{{ .Permalink }}" style="width: 100%;">
+      {{ $small := .Resize "420x q95" }}
+      <a href="{{ .Permalink }}" data-barba-prevent="self">
+        <img src="{{ $small.Permalink }}" loading="lazy" style="width: 100%;">
+      </a>
     {{ end }}
   </div>
 

@@ -15,3 +15,5 @@
 # vendor/
 
 !.keep
+
+/resources/_gen/
