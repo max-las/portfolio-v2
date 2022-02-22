@@ -142,7 +142,7 @@ body {
   }
 }
 
-@media screen and (min-width: $mobile-bp + 1) {
+@media screen and (min-width: ($mobile-bp + 1)) {
   .main-nav {
 
     .left-nav {

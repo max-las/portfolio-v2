@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (min-width: $mobile-bp + 1) {
+@media screen and (min-width: ($mobile-bp + 1)) {
   .photography {
     .legal-wrapper {
       position: fixed;

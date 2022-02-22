@@ -162,7 +162,7 @@
   }
 }
 
-@media screen and (min-width: $mobile-bp + 1) {
+@media screen and (min-width: ($mobile-bp + 1)) {
   .know-me {
     .display-row {
       width: 100%;

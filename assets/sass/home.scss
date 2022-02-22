@@ -115,9 +115,13 @@
   }
 }
 
-@media screen and (min-width: $mobile-bp + 1) {
+@media screen and (min-width: ($mobile-bp + 1)) {
   .main-nav.on-home {
-    display: none;
+    visibility: hidden;
+
+    .flag {
+      visibility: visible;
+    }
   }
 
   .home {
