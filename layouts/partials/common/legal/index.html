@@ -1,8 +1,8 @@
 <div class="main-content legal">
 
   <h1 class="title is-family-playfair-display">
-    {{ partial (printf "%v/title.html" (.Scratch.Get "TPartialsPath")) . }}
+    {{ partial (printf "%vtitle.html" (.Scratch.Get "TPartialsPath")) . }}
   </h1>
 
-  {{ partial (printf "%v/content.html" (.Scratch.Get "TPartialsPath")) . }}
+  {{ partial (printf "%vcontent.html" (.Scratch.Get "TPartialsPath")) . }}
 </div>
