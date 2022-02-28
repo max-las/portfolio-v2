@@ -29,7 +29,7 @@
           <nav class="main-nav is-family-playfair-display">
         {{ end }}
             <div class="left-nav">
-              <a href="{{ .Param "root" }}">
+              <a href="{{ .Site.LanguagePrefix }}/">
                 <div class="left-title">
                   <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
                 </div>
@@ -42,9 +42,9 @@
             </div>
 
             <div class="right-nav">
-              <a href="{{ .Param "root" }}web-development/">{{ humanize (i18n "web_development") }}</a>
-              <a href="{{ .Param "root" }}photography/">{{ humanize (i18n "photography") }}</a>
-              <a href="{{ .Param "root" }}know-me/">{{ humanize (i18n "know_me") }}</a>
+              <a href="{{ .Site.LanguagePrefix }}/web-development/">{{ humanize (i18n "web_development") }}</a>
+              <a href="{{ .Site.LanguagePrefix }}/photography/">{{ humanize (i18n "photography") }}</a>
+              <a href="{{ .Site.LanguagePrefix }}/know-me/">{{ humanize (i18n "know_me") }}</a>
 
               {{ range $language := .Site.Languages }}
                 {{ if eq $language $.Site.Language }}

@@ -20,16 +20,16 @@
         <p class="is-white is-family-playfair-display">{{ i18n "home_presentation" }}</p>
 
         <nav class="home-nav is-yellow is-family-playfair-display">
-          <a href="{{ .Param "root" }}web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "web_development") }}</span></a>
-          <a href="{{ .Param "root" }}photography/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "photography") }}</span></a>
-          <a href="{{ .Param "root" }}know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "know_me") }}</span></a>
+          <a href="{{ .Site.LanguagePrefix }}/web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "web_development") }}</span></a>
+          <a href="{{ .Site.LanguagePrefix }}/photography/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "photography") }}</span></a>
+          <a href="{{ .Site.LanguagePrefix }}/know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "know_me") }}</span></a>
         </nav>
 
       </div>
 
     </div>
 
-    <a class="legal is-family-ibm-plex" href="{{ .Param "root" }}legal/">{{ i18n "legal_notice" }}</a>
+    <a class="legal is-family-ibm-plex" href="{{ .Site.LanguagePrefix }}/legal/">{{ i18n "legal_notice" }}</a>
 
   </div>
 {{ end }}
