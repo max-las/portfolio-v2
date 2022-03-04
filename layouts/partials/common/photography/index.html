@@ -1,6 +1,6 @@
 <div class="main-content photography">
 
-  <h1 class="title is-family-playfair-display">
+  <h1 class="title font-butler medium">
     {{ partial (printf "%vtitle.html" (.Scratch.Get "TPartialsPath")) . }}
   </h1>
 
@@ -14,7 +14,7 @@
   </div>
 
   <div class="legal-wrapper">
-    <a class="legal is-family-ibm-plex" href="/legal/">{{ humanize (i18n "legal_notice") }}</a>
+    <a class="legal font-ibm-plex" href="/legal/">{{ humanize (i18n "legal_notice") }}</a>
   </div>
 
 </div>

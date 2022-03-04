@@ -2,7 +2,7 @@
   <div class="main-content home">
 
     <div class="home-title-wrapper">
-      <h1 class="is-family-playfair-display home-title animate-duration_3s">
+      <h1 class="font-butler medium home-title animate-duration_3s">
         <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
       </h1>
     </div>
@@ -17,9 +17,9 @@
 
       <div class="right animate-duration_3s">
 
-        <p class="is-white is-family-playfair-display">{{ i18n "home_presentation" }}</p>
+        <p class="is-white font-butler medium">{{ safeHTML (i18n "home_presentation") }}</p>
 
-        <nav class="home-nav is-yellow is-family-playfair-display">
+        <nav class="home-nav is-yellow font-butler medium">
           <a href="{{ .Site.LanguagePrefix }}/web-development/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "web_development") }}</span></a>
           <a href="{{ .Site.LanguagePrefix }}/photography/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "photography") }}</span></a>
           <a href="{{ .Site.LanguagePrefix }}/know-me/"><img src="/images/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "know_me") }}</span></a>
@@ -29,7 +29,7 @@
 
     </div>
 
-    <a class="legal is-family-ibm-plex" href="{{ .Site.LanguagePrefix }}/legal/">{{ i18n "legal_notice" }}</a>
+    <a class="legal font-ibm-plex" href="{{ .Site.LanguagePrefix }}/legal/">{{ i18n "legal_notice" }}</a>
 
   </div>
 {{ end }}

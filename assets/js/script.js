@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	animateCSS(".home-row .right", "slideInRight");
 
 	barba.init({
+		timeout: 10000,
     transitions: [{
       name: 'default-transition',
       leave(data) {

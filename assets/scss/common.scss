@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Playfair+Display&display=swap');
+@import "font-faces/Google-Fonts";
+@import "font-faces/Butler";
 
-.is-family-playfair-display {
-  font-family: 'Playfair Display', serif;
-}
 
-.is-family-ibm-plex {
-  font-family: 'IBM Plex Serif', serif;
-}
 
 .is-yellow {
 	color: $yellow;

@@ -88,14 +88,14 @@
       }
 
       .right {
-        font-size: 18px;
-
         p {
+          font-size: 28px;
           text-align: center;
           width: 296px;
         }
 
         .home-nav {
+          font-size: 18px;
           align-items: center;
 
           a {
@@ -124,20 +124,25 @@
     }
   }
 
-  .home {
-    .home-row {
-      position: fixed;
-      bottom: 0px;
+  .home-row {
+    position: fixed;
+    bottom: 0px;
 
-      .right {
-        width: 450px;
-        margin-top: 70px;
+    .right {
+      margin-top: 70px;
+      width: 450px;
+
+      p {
+        font-size: 38px;
+      }
+
+      nav {
         font-size: 28px;
       }
+    }
 
-      .left {
-        height: 70vh;
-      }
+    .left {
+      height: 70vh;
     }
   }
 }
