@@ -7,6 +7,8 @@
   }
 
   .presentation-text {
+    position: relative;
+    z-index: 20;
     width: 60vw;
     font-size: 18px;
     margin-right: auto;
