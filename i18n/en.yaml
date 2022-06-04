@@ -1,26 +1,17 @@
-individual:
-  other: individual
+individual: individual
 
-collaborative:
-  other: collaborative
+collaborative: collaborative
 
-legal_notice:
-  other: legal notice
+legal_notice: legal notice
 
-photography:
-  other: photography
+photography: photography
 
-web_development:
-  other: web development
+web_development: web development
 
-know_me:
-  other: know me
+know_me: know me
 
-home_presentation:
-  other: Ethical developer.<br>Amateur photographer.
+home_presentation: Full-stack web developer.<br>Amateur photographer.
 
-of:
-  other: of
+of: of
 
-to:
-  other: to
+to: to
