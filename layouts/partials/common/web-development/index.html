@@ -5,104 +5,28 @@
   </h1>
 
   <div class="sites-list">
-    <div class="site-presentation">
-      <img src="/images/regards.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">Regards</span>
-        2022 | {{ i18n "collaborative" }}
+    {{ range $index, $site := .Site.Data.web_development }}
+      <div class="site-presentation">
+        <img src="/images/{{ $site.image }}" loading="lazy">
+        <div class="v-separator"></div>
+        <p class="pre is-white font-ibm-plex">
+          <span class="site-title">{{ $site.title }}</span>
+          {{ $site.year }} | {{ i18n (cond $site.individual "individual" "collaborative") }}
 
-        Frontend
-        Svelte, Sass
+          {{ $site.job }}
+          {{ $site.tech }}
 
-        <a href="https://regards-bacchanight.netlify.app">regards-bacchanight.netlify.app</a>
-        <a href="https://github.com/max-las/regards">github.com/max-las/regards</a>
-      </p>
-    </div>
+          {{ $linkUrl := urls.Parse $site.link }}
+          {{ $repoUrl := urls.Parse $site.repo }}
+          <a href="{{ $site.link }}">{{ $linkUrl.Host }}{{ $linkUrl.Path }}</a>
+          <a href="{{ $site.repo }}">{{ $repoUrl.Host }}{{ $repoUrl.Path }}</a>
+        </p>
+      </div>
 
-    <div class="h-separator"></div>
-
-    <div class="site-presentation">
-      <img src="/images/supernotes.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">SuperNotes</span>
-        2021 | {{ i18n "individual" }}
-
-        Frontend, Backend
-        React, Bulma
-
-        <a href="https://react-supernotes.netlify.app">react-supernotes.netlify.app</a>
-        <a href="https://github.com/max-las/react-supernotes">github.com/max-las/react-supernotes</a>
-      </p>
-    </div>
-
-    <div class="h-separator"></div>
-
-    <div class="site-presentation">
-      <img src="/images/portfolio.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">Portfolio</span>
-        2021 | {{ i18n "individual" }}
-
-        Design, frontend
-        HTML, Sass, JS, Go (Hugo)
-
-        <a href="https://www.maximelasserre.com">maximelasserre.com</a>
-        <a href="https://github.com/max-las/portfolio-v2">github.com/max-las/portfolio-v2</a>
-      </p>
-    </div>
-
-    <div class="h-separator"></div>
-
-    <div class="site-presentation">
-      <img src="/images/humans_of_grenoble.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">Humans of Grenoble</span>
-        2021 | {{ i18n "individual" }}
-
-        Design, frontend, backend
-        HTML, CSS, JS, Go (Beego), Postgresql
-
-        <a href="https://humansofgrenoble.com">humansofgrenoble.com</a>
-        <a href="https://github.com/max-las/humans-of-grenoble">github.com/max-las/humans-of-grenoble</a>
-      </p>
-    </div>
-
-    <div class="h-separator"></div>
-
-    <div class="site-presentation">
-      <img src="/images/cinema_le_festival.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">Cinéma Le Festival</span>
-        2020 | {{ i18n "collaborative" }}
-
-        Design, frontend
-        HTML, CSS, JS
-
-        <a href="https://cinema-lefestival.netlify.app">cinema-lefestival.netlify.app</a>
-        <a href="https://github.com/max-las/Mangrela">github.com/max-las/Mangrela</a>
-      </p>
-    </div>
-
-    <div class="h-separator"></div>
-
-    <div class="site-presentation">
-      <img src="/images/retrosmash.jpg" loading="lazy">
-      <div class="v-separator"></div>
-      <p class="pre is-white font-ibm-plex">
-        <span class="site-title">Retrosmash</span>
-        2016 | {{ i18n "individual" }}
-
-        Design, frontend, backend
-        PHP, MySQL, HTML, JS, CSS
-
-        <a href="http://retrosmash.22web.org">retrosmash.22web.org</a>
-      </p>
-    </div>
+      {{ if ne (add $index 1) (len $.Site.Data.web_development) }}
+        <div class="h-separator"></div>
+      {{ end }}
+    {{ end }}
   </div>
 
   <div class="legal-wrapper">

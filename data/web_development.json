@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Regards",
+    "year": 2022,
+    "individual": false,
+    "job": "Frontend",
+    "tech": "Svelte, Sass",
+    "link": "https://regards-bacchanight.netlify.app",
+    "repo": "https://github.com/max-las/regards",
+    "image": "regards.jpg"
+  },
+  {
+    "title": "SuperNotes",
+    "year": 2021,
+    "individual": true,
+    "job": "Frontend, backend",
+    "tech": "React, Bulma",
+    "link": "https://react-supernotes.netlify.app",
+    "repo": "https://github.com/max-las/react-supernotes",
+    "image": "supernotes.jpg"
+  },
+  {
+    "title": "Portfolio",
+    "year": 2021,
+    "individual": true,
+    "job": "Design, frontend",
+    "tech": "HTML, Sass, JS, Go (Hugo)",
+    "link": "https://www.maximelasserre.com",
+    "repo": "https://github.com/max-las/portfolio-v2",
+    "image": "portfolio.jpg"
+  },
+  {
+    "title": "Humans of Grenoble",
+    "year": 2021,
+    "individual": true,
+    "job": "Design, frontend, backend",
+    "tech": "HTML, CSS, JS, Go (Beego), Postgresql",
+    "link": "https://humansofgrenoble.com",
+    "repo": "https://github.com/max-las/humans-of-grenoble",
+    "image": "humans_of_grenoble.jpg"
+  },
+  {
+    "title": "Cinéma Le Festival",
+    "year": 2020,
+    "individual": false,
+    "job": "Design, frontend",
+    "tech": "HTML, CSS, JS",
+    "link": "https://cinema-lefestival.netlify.app",
+    "repo": "https://github.com/max-las/Mangrela",
+    "image": "cinema_le_festival.jpg"
+  },
+  {
+    "title": "Retrosmash",
+    "year": 2016,
+    "individual": true,
+    "job": "Design, frontend, backend",
+    "tech": "PHP, MySQL, HTML, JS, CSS",
+    "link": "http://retrosmash.22web.org",
+    "repo": null,
+    "image": "retrosmash.jpg"
+  }
+]
