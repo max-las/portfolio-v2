@@ -16,16 +16,18 @@
           {{ $site.job }}
           {{ $site.tech }}
 
-          {{ $linkUrl := urls.Parse $site.link }}
-          {{ $repoUrl := urls.Parse $site.repo }}
+          {{ $linkUrl := urls.Parse $site.link -}}
           <a href="{{ $site.link }}">{{ $linkUrl.Host }}{{ $linkUrl.Path }}</a>
-          <a href="{{ $site.repo }}">{{ $repoUrl.Host }}{{ $repoUrl.Path }}</a>
+          {{ if $site.repo -}}
+            {{- $repoUrl := urls.Parse $site.repo -}}
+            <a href="{{ $site.repo }}">{{ $repoUrl.Host }}{{ $repoUrl.Path }}</a>
+          {{- end -}}
         </p>
       </div>
 
-      {{ if ne (add $index 1) (len $.Site.Data.web_development) }}
+      {{- if ne (add $index 1) (len $.Site.Data.web_development) -}}
         <div class="h-separator"></div>
-      {{ end }}
+      {{- end -}}
     {{ end }}
   </div>
 
