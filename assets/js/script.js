@@ -5,16 +5,20 @@ const toggleFlag = () => {
 	toShow.classList.add("selected");
 }
 
-const animateCSS = (selector, animation, prefix = 'animate__') => new Promise((resolve, _reject) => {
+const animateCSS = async (selector, animation, prefix = 'animate__') => new Promise((resolve) => {
+	const node = document.querySelector(selector);
+	if (!node) {
+		resolve("Nothing to animate");
+	}
+
   const animationName = `${prefix}${animation}`;
-  const node = document.querySelector(selector);
 
   node.classList.add(`${prefix}animated`, animationName);
 
   const handleAnimationEnd = (event) => {
     event.stopPropagation();
 		node.classList.remove(`${prefix}animated`, animationName);
-    resolve('Animation ended');
+    resolve("Animation ended");
   }
 
 	node.addEventListener("animationend", handleAnimationEnd, { once: true })

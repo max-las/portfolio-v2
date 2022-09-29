@@ -49,12 +49,10 @@
                 {{ if eq $language $.Site.Language }}
                   <img id="{{ $language.Lang }}-flag" class="flag selected" src="/images/{{ $language.Lang }}.png" height="20px">
                 {{ else }}
-                  {{ range $translation := $.Translations }}
-                    {{ if eq $language $translation.Language }}
-                      <a href="{{ $translation.Permalink }}" class="flagLink">
-                        <img id="{{ $translation.Language.Lang }}-flag" class="flag" src="/images/{{ $translation.Language.Lang }}.png" height="20px">
-                      </a>
-                    {{ end }}
+                  {{ range where $.Translations "Language.Lang" $language.Lang }}
+                    <a href="{{ .Permalink }}" class="flagLink">
+                      <img id="{{ .Language.Lang }}-flag" class="flag" src="/images/{{ .Language.Lang }}.png" height="20px">
+                    </a>
                   {{ end }}
                 {{ end }}
               {{ end }}
