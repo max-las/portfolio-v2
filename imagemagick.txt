@@ -1,0 +1,2 @@
+mogrify -resize 2500x -format webp -define webp:pass=6 -define webp:target-size=600000 -path webp *
+mogrify -resize 1000x -format jpg -path jpg *

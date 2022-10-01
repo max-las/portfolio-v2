@@ -6,9 +6,14 @@
 
   <div class="photo-grid">
     {{ range resources.Match "photos/**.jpg" }}
-      {{ $small := .Resize "420x q95" }}
-      <a href="{{ .Permalink }}" data-barba-prevent="self">
-        <img src="{{ $small.Permalink }}" loading="lazy" style="width: 100%;">
+      {{ $webp := resources.Get (replace .Name "jpg" "webp") }}
+      {{ $small_webp := .Resize "420x q90 webp" }}
+      {{ $small_jpg := .Resize "420x q90 jpg" }}
+      <a href="{{ $webp.Permalink }}" data-barba-prevent="self">
+        <picture>
+          <source srcset="{{ $small_webp.Permalink }}">
+          <img src="{{ $small_jpg.Permalink }}" alt="{{ .Name }}" loading="lazy" style="width: 100%;">
+        </picture>
       </a>
     {{ end }}
   </div>
