@@ -26,19 +26,19 @@ const animateCSS = async (selector, animation, prefix = 'animate__') => new Prom
 
 const toggleMobileNav = () => {
 	let rightNav = document.querySelector(".right-nav");
-	let crossSvg = document.querySelector(".burger-menu .cross-svg");
-	let burgerSvg = document.querySelector(".burger-menu .burger-svg");
+	let closeSvg = document.querySelector(".burger-menu .close-svg");
+	let menuSvg = document.querySelector(".burger-menu .menu-svg");
 
 	if(rightNav.style.display == "flex"){
 		animateCSS(".right-nav", "slideOutUp").then(() => {
 			rightNav.style.display = null;
-			crossSvg.style.display = null;
-			burgerSvg.style.display = null;
+			closeSvg.style.display = null;
+			menuSvg.style.display = null;
 		});
 	}else{
 		rightNav.style.display = "flex";
-		crossSvg.style.display = "inline";
-		burgerSvg.style.display = "none";
+		closeSvg.style.display = "inline";
+		menuSvg.style.display = "none";
 		animateCSS(".right-nav", "slideInDown");
 	}
 }
