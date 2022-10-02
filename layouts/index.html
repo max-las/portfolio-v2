@@ -1,3 +1,10 @@
+{{ define "og" }}
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Site.BaseURL }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/web_development/portfolio.jpg">
+{{ end }}
+
 {{ define "main" }}
   <div class="main-content home">
 

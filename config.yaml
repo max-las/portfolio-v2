@@ -1,4 +1,5 @@
-title: Portfolio - Maxime Lasserre
+title: Maxime Lasserre
+baseURL: https://www.maximelasserre.com/
 disableKinds:
   - taxonomy
   - term
