@@ -9,14 +9,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    {{ $styles := resources.Match "scss/**.scss" | resources.Concat "scss/styles.scss" | resources.ToCSS | resources.Minify }}
+    {{ $styles := resources.Match "scss/**.scss" | resources.Concat "scss/styles.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/@barba/core"></script>
 
-  	{{ $script := resources.Get "js/script.js" }}
-  	<script src="{{ $script.Permalink }}"></script>
+  	{{ $script := resources.Get "js/script.js" | minify | fingerprint }}
+  	<script async src="{{ $script.Permalink }}"></script>
   </head>
   <body data-barba="wrapper">
     <main data-barba="container" data-lang="{{ .Site.Language.Lang }}">
@@ -42,11 +42,11 @@
 
             {{ range $language := .Site.Languages }}
               {{ if eq $language $.Site.Language }}
-                <img id="{{ $language.Lang }}-flag" class="flag selected" src="/images/icons/{{ $language.Lang }}.svg" height="20px">
+                {{ partial "common/flag.html" (dict "ctx" $ "lang" $language.Lang "selected" "true") }}
               {{ else }}
                 {{ range where $.Translations "Language.Lang" $language.Lang }}
                   <a href="{{ .Permalink }}" class="flagLink">
-                    <img id="{{ .Language.Lang }}-flag" class="flag" src="/images/icons/{{ .Language.Lang }}.svg" height="20px">
+                    {{ partial "common/flag.html" (dict "ctx" $ "lang" .Language.Lang) }}
                   </a>
                 {{ end }}
               {{ end }}

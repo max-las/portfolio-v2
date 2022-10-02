@@ -8,7 +8,6 @@
     </div>
 
     <div class="home-row">
-
       <div class="left animate-duration_3s">
         <img src="/images/ornament/home_img.jpg" alt="Photo {{ i18n "of" }} Maxime Lasserre">
       </div>
@@ -16,20 +15,28 @@
       <div class="v-separator"></div>
 
       <div class="right animate-duration_3s">
-
         <p class="is-white font-butler medium">{{ safeHTML (i18n "home_presentation") }}</p>
 
         <nav class="home-nav is-yellow font-butler medium">
-          <a href="{{ .Site.LanguagePrefix }}/web-development/"><img src="/images/icons/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "web_development") }}</span></a>
-          <a href="{{ .Site.LanguagePrefix }}/photography/"><img src="/images/icons/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "photography") }}</span></a>
-          <a href="{{ .Site.LanguagePrefix }}/know-me/"><img src="/images/icons/chevron-double-right.svg"><span class="underline">{{ humanize (i18n "know_me") }}</span></a>
+          <a href="{{ .Site.LanguagePrefix }}/web-development/">
+            <img alt="right chevron" src="/images/icons/chevron-double-right.svg">
+            <span class="underline">{{ humanize (i18n "web_development") }}</span>
+          </a>
+          <a href="{{ .Site.LanguagePrefix }}/photography/">
+            <img alt="right chevron" src="/images/icons/chevron-double-right.svg">
+            <span class="underline">{{ humanize (i18n "photography") }}</span>
+          </a>
+          <a href="{{ .Site.LanguagePrefix }}/know-me/">
+            <img alt="right chevron" src="/images/icons/chevron-double-right.svg">
+            <span class="underline">{{ humanize (i18n "know_me") }}</span>
+          </a>
         </nav>
-
       </div>
-
     </div>
 
-    <a class="legal font-ibm-plex" href="{{ .Site.LanguagePrefix }}/legal/">{{ i18n "legal_notice" }}</a>
+    <a class="legal font-ibm-plex" href="{{ .Site.LanguagePrefix }}/legal/">
+      {{ i18n "legal_notice" }}
+    </a>
 
   </div>
 {{ end }}

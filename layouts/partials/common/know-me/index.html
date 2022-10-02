@@ -1,5 +1,4 @@
 <div class="main-content know-me">
-
   <h1 class="title font-butler medium">
     {{ partial (printf "%vtitle.html" (.Scratch.Get "TPartialsPath")) . }}
   </h1>
@@ -9,7 +8,6 @@
   </div>
 
   <div class="display-row">
-
     <div class="icons-grid">
       <div class="icons-column">
         <img src="/images/show_off/photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop">
@@ -59,11 +57,9 @@
         <img src="/images/icons/mail.svg" alt="Email {{ i18n "to" }} Maxime Lasserre">
       </a>
     </div>
-
   </div>
 
   <div class="legal-wrapper">
     <a class="legal font-ibm-plex" href="/legal/">{{ humanize (i18n "legal_notice") }}</a>
   </div>
-
 </div>

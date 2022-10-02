@@ -1,0 +1,7 @@
+<img
+  id="{{ .lang }}-flag"
+  alt="{{ index .ctx.Site.Data.flag_names .lang }}"
+  class="flag{{ cond (eq .selected "true") " selected" "" }}"
+  src="/images/icons/{{ .lang }}.svg"
+  height="20px"
+>
