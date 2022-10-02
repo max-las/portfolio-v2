@@ -1,18 +1,17 @@
 @import "font-faces/Google-Fonts";
 @import "font-faces/Butler";
 
-
-
-.is-yellow {
-	color: $yellow;
-}
-
-.is-red {
-	color: $red;
-}
-
 .is-white {
 	color: white;
+}
+
+span.red-yellow {
+  display: inline-block;
+  color: $yellow;
+
+  &::first-letter {
+    color: $red;
+  }
 }
 
 .is-hidden {
