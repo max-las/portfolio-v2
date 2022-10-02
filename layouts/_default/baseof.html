@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ .Site.Language.Lang }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,46 +19,42 @@
   	<script src="{{ $script.Permalink }}"></script>
   </head>
   <body data-barba="wrapper">
-    <main data-barba="container" data-barba-namespace="page">
+    <main data-barba="container" data-lang="{{ .Site.Language.Lang }}">
       <header>
-        {{ if .IsHome }}
-          <nav class="main-nav on-home font-butler medium">
-        {{ else }}
-          <nav class="main-nav font-butler medium">
-        {{ end }}
-            <div class="left-nav">
-              <a href="{{ .Site.LanguagePrefix }}/">
-                <div class="left-title">
-                  <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
-                </div>
-              </a>
-
-              <div class="burger-menu is-yellow" onclick="toggleMobileNav()">
-                <svg class="menu-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14"><path fill="currentColor" d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z" class=""></path></svg>
-                <svg class="close-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
+        <nav class="main-nav font-butler medium{{ cond .IsHome " on-home" "" }}">
+          <div class="left-nav">
+            <a href="{{ .Site.LanguagePrefix }}/">
+              <div class="left-title">
+                <span class="is-red">M</span><span class="is-yellow">axime</span> <span class="is-red">L</span><span class="is-yellow">asserre</span>
               </div>
+            </a>
+
+            <div class="burger-menu is-yellow" onclick="toggleMobileNav()">
+              <svg class="menu-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14"><path fill="currentColor" d="M442 114H6a6 6 0 0 1-6-6V84a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6zm0 160H6a6 6 0 0 1-6-6v-24a6 6 0 0 1 6-6h436a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6z" class=""></path></svg>
+              <svg class="close-svg" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
             </div>
+          </div>
 
-            <div class="right-nav">
-              <a href="{{ .Site.LanguagePrefix }}/web-development/">{{ humanize (i18n "web_development") }}</a>
-              <a href="{{ .Site.LanguagePrefix }}/photography/">{{ humanize (i18n "photography") }}</a>
-              <a href="{{ .Site.LanguagePrefix }}/know-me/">{{ humanize (i18n "know_me") }}</a>
+          <div class="right-nav">
+            <a href="{{ .Site.LanguagePrefix }}/web-development/">{{ humanize (i18n "web_development") }}</a>
+            <a href="{{ .Site.LanguagePrefix }}/photography/">{{ humanize (i18n "photography") }}</a>
+            <a href="{{ .Site.LanguagePrefix }}/know-me/">{{ humanize (i18n "know_me") }}</a>
 
-              {{ range $language := .Site.Languages }}
-                {{ if eq $language $.Site.Language }}
-                  <img id="{{ $language.Lang }}-flag" class="flag selected" src="/images/icons/{{ $language.Lang }}.svg" height="20px">
-                {{ else }}
-                  {{ range where $.Translations "Language.Lang" $language.Lang }}
-                    <a href="{{ .Permalink }}" class="flagLink">
-                      <img id="{{ .Language.Lang }}-flag" class="flag" src="/images/icons/{{ .Language.Lang }}.svg" height="20px">
-                    </a>
-                  {{ end }}
+            {{ range $language := .Site.Languages }}
+              {{ if eq $language $.Site.Language }}
+                <img id="{{ $language.Lang }}-flag" class="flag selected" src="/images/icons/{{ $language.Lang }}.svg" height="20px">
+              {{ else }}
+                {{ range where $.Translations "Language.Lang" $language.Lang }}
+                  <a href="{{ .Permalink }}" class="flagLink">
+                    <img id="{{ .Language.Lang }}-flag" class="flag" src="/images/icons/{{ .Language.Lang }}.svg" height="20px">
+                  </a>
                 {{ end }}
               {{ end }}
+            {{ end }}
 
-              <div class="mobile-nav-border-bottom"></div>
-            </div>
-          </nav>
+            <div class="mobile-nav-border-bottom"></div>
+          </div>
+        </nav>
       </header>
 
       <section class="barba-content">

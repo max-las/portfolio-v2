@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
       },
       enter(data) {
+				document.querySelector("html").setAttribute("lang", data.next.container.dataset.lang);
         gsap.from(data.next.container.querySelector(".barba-content"), {
           opacity: 0
         });
