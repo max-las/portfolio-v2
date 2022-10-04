@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		flag.addEventListener("click", toggleFlag);
 	});
 
+	document.querySelector(".burger-menu").addEventListener("click", toggleMobileNav);
+
 	animateCSS(".home-title", "slideInDown");
 	animateCSS(".home-row .left", "slideInLeft");
 	animateCSS(".home-row .right", "slideInRight");
