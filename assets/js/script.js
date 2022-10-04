@@ -1,10 +1,3 @@
-const toggleFlag = () => {
-	let toHide = document.querySelector(".flag.selected");
-	let toShow = document.querySelector(".flag:not(.selected)");
-	toHide.classList.remove("selected");
-	toShow.classList.add("selected");
-}
-
 const animateCSS = async (selector, animation, prefix = 'animate__') => new Promise((resolve) => {
 	const node = document.querySelector(selector);
 	if (!node) {
@@ -43,11 +36,7 @@ const toggleMobileNav = () => {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-	document.querySelectorAll(".flag").forEach((flag) => {
-		flag.addEventListener("click", toggleFlag);
-	});
-
+document.addEventListener("DOMContentLoaded", () => {
 	document.querySelector(".burger-menu").addEventListener("click", toggleMobileNav);
 
 	animateCSS(".home-title", "slideInDown");
@@ -65,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function(){
       },
       enter(data) {
 				document.querySelector("html").setAttribute("lang", data.next.container.dataset.lang);
+				data.next.container.querySelector(".burger-menu").addEventListener("click", toggleMobileNav);
         gsap.from(data.next.container.querySelector(".barba-content"), {
           opacity: 0
         });
